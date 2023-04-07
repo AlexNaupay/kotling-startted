@@ -28,7 +28,11 @@ fun main(args: Array<String>) {
     val lambdaAlex: (String) -> String = { "$it lambda" }
     val lambdaAlex2: (String, String) -> String = { one: String, two: String -> "$one $two lambda" }
 
+    val a = { one: String, two: String -> "$one $two lambda" }
+
+
     println(lambdaAlex("Alex"))
     println(lambdaAlex2("Alex", "Naupay"))
+    println(a("a", "b"))
 
 }
