@@ -1,5 +1,6 @@
 const val PI = 3.1416
 
+// https://github.com/Gvetri/curso-kotlin-desde-cero.git
 
 fun main(args: Array<String>) {
     println("Hello World!")
@@ -16,5 +17,13 @@ fun main(args: Array<String>) {
     println("Long: $integerLong")
 
     val message = if (name.length > 3) "large" else "short"
+
+    val set = setOf("a","b","c")
+
+    println(set)
+
+    fun miFuncion(nombre: String, apellido: String) = nombre + apellido
+
+    println( miFuncion("Alex", "Naupay"))
 
 }
