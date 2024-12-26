@@ -26,4 +26,12 @@ fun main(args: Array<String>) {
 
     println( miFuncion("Alex", "Naupay"))
 
+    val FIRMWARE_VERSION_PATTERN = Regex("""[0-9]{1,2}\.[0-9]{1,3}""").toPattern()
+
+    val receivedData = "1.45"
+    if (FIRMWARE_VERSION_PATTERN.matcher(receivedData).matches()){
+        println(receivedData)
+    }
+
+
 }
