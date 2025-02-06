@@ -2,6 +2,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 fun getLettersFlow(): Flow<String> {
@@ -30,7 +31,10 @@ fun main() = runBlocking {
         }
     }
 
-    getLettersFlow().collect{ println("Letter: $it") }
+    launch {
+        getLettersFlow().collect{ println("Letter: $it") }
+    }
+
 
     getNumbersFlow().collect { println(it) }
     numberFlow.collectLatest { println("Latest:$it") }
