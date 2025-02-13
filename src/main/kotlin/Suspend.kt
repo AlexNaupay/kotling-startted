@@ -11,6 +11,7 @@ fun main(){
             val a = aRemoteValue()
             println("A: $a")
         }
+        print("After launch{ ... ")
         val b = aRemoteValue()
         println("B: $b")
 
