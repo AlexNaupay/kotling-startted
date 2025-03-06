@@ -19,6 +19,7 @@ fun main(){
 
     println("Password: " + isValidPassword("alexhalexh1A<ñAAsefsef"))
     println("Password punct: " + Pattern.compile("\\p{Punct}+").matcher("ñ").find())
+    println("Freq: " + Pattern.compile("[0-9]{2,3}(\\.[0-9]+)?").matcher("90").matches() )
 
 }
 fun isValidName(name: String): Boolean {
