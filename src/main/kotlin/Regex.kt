@@ -21,7 +21,14 @@ fun main(){
     println("Password punct: " + Pattern.compile("\\p{Punct}+").matcher("ñ").find())
     println("Freq: " + Pattern.compile("[0-9]{2,3}(\\.[0-9]+)?").matcher("90").matches() )
 
+    println(startsWithIsoDate("2025-03-06T13:42:37.000-05:00,0.00,0.00,5.00,true,true"))
+
 }
+
+fun startsWithIsoDate(string: String): Boolean {
+    return "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}".toRegex().containsMatchIn(string)
+}
+
 fun isValidName(name: String): Boolean {
     return if (name.isNotEmpty() && name.length < 70) {
         // Pattern.compile("^[A-Z]+").matcher(name).matches()  // Wrong
